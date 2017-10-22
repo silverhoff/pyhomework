@@ -28,6 +28,17 @@ class firsttest(unittest.TestCase):
         self.open_group_page_again(wd)
         self.logout(wd)
 
+    def test_firsttest_empty_group(self):
+        wd = self.wd
+        self.open_home_page(wd)
+        self.login(wd, username="admin", password="secret")
+        self.open_group_page(wd)
+        self.create_new_group(wd)
+        self.fill_data_new_group(wd, Group(name="", header="", footer=""))
+        self.new_group_submit(wd)
+        self.open_group_page_again(wd)
+        self.logout(wd)
+
     def open_home_page(self, wd):
         wd.get("http://localhost/addressbook/")
 
