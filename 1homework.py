@@ -17,9 +17,10 @@ class firsttest(unittest.TestCase):
         self.wd.implicitly_wait(60)
 
     def test_firsttest(self):
-        success = True
         wd = self.wd
+        # open homepage
         wd.get("http://localhost/addressbook/")
+        # login
         wd.find_element_by_css_selector("html").click()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
@@ -28,8 +29,11 @@ class firsttest(unittest.TestCase):
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys("secret")
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+        # open page with groups
         wd.find_element_by_link_text("groups").click()
+        # create new group
         wd.find_element_by_xpath("//div[@id='content']/form/input[4]").click()
+        # fill group form
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
         wd.find_element_by_name("group_name").send_keys("ftft")
@@ -39,14 +43,12 @@ class firsttest(unittest.TestCase):
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys("tegvetr")
+        # submit new group creation
         wd.find_element_by_name("submit").click()
+        # return to group page
         wd.find_element_by_link_text("groups").click()
+        # logout
         wd.find_element_by_link_text("Logout").click()
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").send_keys("\\undefined")
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").send_keys("\\undefined")
-        self.assertTrue(success)
 
     def tearDown(self):
         self.wd.quit()
