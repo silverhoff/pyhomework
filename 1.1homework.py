@@ -36,6 +36,7 @@ class secondtest(unittest.TestCase):
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
     def fill_new_contact(self, wd):
+        # fill data for new contact
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("Ivan")
@@ -73,6 +74,7 @@ class secondtest(unittest.TestCase):
         wd.get("http://localhost/addressbook/")
 
     def login(self, wd):
+        #login to addressbook
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys("secret")
