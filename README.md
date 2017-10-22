@@ -1,1 +1,1 @@
-# pyhomework
+# Homewprk for python tester curses
