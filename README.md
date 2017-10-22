@@ -1,1 +1,1 @@
-# Homewprk for python tester curses
+# Homework for python tester curses
