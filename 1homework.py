@@ -19,24 +19,15 @@ class firsttest(unittest.TestCase):
 
     def test_firsttest(self):
         wd = self.wd
-        self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
-        self.open_group_page(wd)
-        self.create_new_group(wd)
         self.fill_data_new_group(wd, Group(name="ftft", header="tftf", footer="tegvetr"))
-        self.new_group_submit(wd)
-        self.open_group_page_again(wd)
         self.logout(wd)
 
     def test_firsttest_empty_group(self):
         wd = self.wd
         self.open_home_page(wd)
         self.login(wd, username="admin", password="secret")
-        self.open_group_page(wd)
-        self.create_new_group(wd)
         self.fill_data_new_group(wd, Group(name="", header="", footer=""))
-        self.new_group_submit(wd)
-        self.open_group_page_again(wd)
         self.logout(wd)
 
     def open_home_page(self, wd):
@@ -44,6 +35,7 @@ class firsttest(unittest.TestCase):
 
     def login(self, wd, username, password):
         # login
+        self.open_home_page(wd)
         wd.find_element_by_css_selector("html").click()
         wd.find_element_by_name("user").click()
         wd.find_element_by_name("user").clear()
@@ -57,10 +49,12 @@ class firsttest(unittest.TestCase):
         wd.find_element_by_link_text("groups").click()
 
     def create_new_group(self, wd):
+        self.open_group_page(wd)
         wd.find_element_by_xpath("//div[@id='content']/form/input[4]").click()
 
     def fill_data_new_group(self, wd, group):
         # fill group form
+        self.create_new_group(wd)
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
         wd.find_element_by_name("group_name").send_keys(group.name)
@@ -70,6 +64,7 @@ class firsttest(unittest.TestCase):
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.open_group_page_again(wd)
 
     def new_group_submit(self, wd):
         wd.find_element_by_name("submit").click()
