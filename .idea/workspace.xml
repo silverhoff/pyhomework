@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="tests" name="py.test in 1homework.py" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d1741bd-3412-42bb-88a9-f54bff5bb6ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1homework.py" afterPath="$PROJECT_DIR$/1homework.py" />
@@ -16,11 +21,21 @@
       <file leaf-file-name="1homework.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1homework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            <state relative-caret-position="399">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding>
-                <element signature="e#24#82#0" expanded="true" />
+                <element signature="e#24#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="61" column="22" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -28,8 +43,8 @@
       <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,14 +68,18 @@
         <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/contact.py" />
         <option value="$PROJECT_DIR$/1.1homework.py" />
+        <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/1homework.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="width" value="976" />
     <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -107,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1homework">
+  <component name="RunManager" selected="Python tests.py.test in 1homework.py">
     <configuration name="1.1homework" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,9 +180,9 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\exter\AppData\Local\Programs\Python\Python36\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyhomework" />
@@ -174,16 +193,16 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.1homework" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in 1homework.py" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in 1.1homework.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python.1.1homework" />
+      <item index="1" class="java.lang.String" itemvalue="Python.1.1homework" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in 1homework.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in 1.1homework.py" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.1homework" />
-        <item index="1" class="java.lang.String" itemvalue="Python.1.1homework" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in 1.1homework.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in 1homework.py" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in 1homework.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.1homework" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1.1homework" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in 1.1homework.py" />
       </list>
     </recent_temporary>
   </component>
@@ -201,35 +220,47 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_1_1homework_py - 2017.10.22 at 22h 59m 18s.xml">
-      <configuration name="py.test in 1.1homework.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_1_1homework_py - 2017.10.22 at 23h 00m 35s.xml">
-      <configuration name="py.test in 1.1homework.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_1_1homework_py - 2017.10.22 at 23h 00m 45s.xml">
-      <configuration name="py.test in 1.1homework.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_1_1homework_py - 2017.10.22 at 23h 01m 17s.xml">
-      <configuration name="py.test in 1.1homework.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_1homework_py - 2017.10.22 at 21h 16m 04s.xml">
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 08m 16s.xml">
       <configuration name="py.test in 1homework.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_1homework_py - 2017.10.22 at 22h 59m 12s.xml">
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 19m 05s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 19m 56s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 25m 27s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 25m 57s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 26m 03s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 26m 39s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 28m 05s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 28m 35s.xml">
+      <configuration name="py.test in 1homework.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_1homework_py - 2017.10.24 at 21h 29m 15s.xml">
       <configuration name="py.test in 1homework.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="0" width="976" height="1038" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32672232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33259425" sideWeight="0.5093946" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.21614583" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33259425" sideWeight="0.4906054" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.7838542" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -262,7 +293,7 @@
         <state relative-caret-position="861">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="e#24#82#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -300,14 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -326,12 +349,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="61" column="22" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1homework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        <state relative-caret-position="399">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           <folding>
-            <element signature="e#24#82#0" expanded="true" />
+            <element signature="e#24#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
