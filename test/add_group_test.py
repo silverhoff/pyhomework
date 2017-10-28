@@ -12,11 +12,11 @@ def app(request):
     return fixture
 
 def test_firsttest(app):
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.fill_data_new_group(Group(name="ftft", header="tftf", footer="tegvetr"))
-    app.logout()
+    app.session.logout()
 
 def test_firsttest_empty_group(app):
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.fill_data_new_group(Group(name="", header="", footer=""))
-    app.logout()
+    app.session.logout()

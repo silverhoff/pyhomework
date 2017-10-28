@@ -13,7 +13,7 @@ def app(request):
 
 def test_secondtest(app):
     app.open_home_page()
-    app.login(username="admin", password="secret")
+    app.session.login(username="admin", password="secret")
     app.open_new_contact()
     app.fill_new_contact(Contact(firstname="Ivan", middlename="\\9", lastname="Ivanov", nickname="ivan299",
                               title="Test contact", companyname="Test company", companyaddress="123",
@@ -21,4 +21,4 @@ def test_secondtest(app):
                               homepage="http://localhost/addressbook/edit.php"))
     app.submit_new_contact()
     app.open_home()
-    app.logout()
+    app.session.logout()
