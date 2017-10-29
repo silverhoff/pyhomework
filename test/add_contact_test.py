@@ -1,15 +1,5 @@
 # -*- coding: utf-8 -*-
-import pytest
-
-from fixture.application import Application
 from model.contact import Contact
-
-
-@pytest.fixture
-def app(request):
-    fixture = Application()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
 def test_secondtest(app):
     app.open_home_page()
@@ -21,4 +11,4 @@ def test_secondtest(app):
                                   homepage="http://localhost/addressbook/edit.php"))
     app.contact.submit_new()
     app.contact.open_home()
-    app.session.logout()
+    #app.session.logout()
