@@ -44,6 +44,8 @@ class Contacthelper:
         wd.find_element_by_name("homepage").clear()
         wd.find_element_by_name("homepage").send_keys(contact.homepage)
 
+
+
     def open_new(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
@@ -53,3 +55,10 @@ class Contacthelper:
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
+
+    def edit_first_contact(self, contact):
+        wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
+        self.fill_data(contact)
+        wd.find_element_by_xpath("//input[@value='Update']").click()
