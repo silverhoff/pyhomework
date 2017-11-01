@@ -50,13 +50,13 @@ class Contacthelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def delete_first_contact(self):
+    def delete(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
-    def edit_first_contact(self, contact):
+    def modify(self, contact):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_css_selector("img[alt=\"Edit\"]").click()
