@@ -2,7 +2,6 @@
 from model.group import Group
 
 
-
 def test_firsttest(app):
     app.group.create_new_group(Group(name="ftft", header="tftf", footer="tegvetr"))
 
