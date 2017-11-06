@@ -9,4 +9,3 @@ def test_secondtest(app):
                                   homepage="http://localhost/addressbook/edit.php"))
     app.contact.submit_new()
     app.contact.open_home()
-    app.session.logout()
