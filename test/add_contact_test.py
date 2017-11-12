@@ -2,6 +2,7 @@
 from model.contact import Contact
 
 def test_secondtest(app):
+    old_contacts = app.contact.get_contact_list()
     app.contact.open_new()
     app.contact.fill_data(Contact(firstname="Ivan", middlename="\\9", lastname="Ivanov", nickname="ivan299",
                                   title="Test contact", companyname="Test company", companyaddress="123",
@@ -9,3 +10,6 @@ def test_secondtest(app):
                                   homepage="http://localhost/addressbook/edit.php"))
     app.contact.submit_new()
     app.contact.open_home()
+    new_contacts = app.contact.get_contact_list()
+    assert len(old_contacts) + 1 == len(new_contacts)
+
