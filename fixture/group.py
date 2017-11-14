@@ -1,5 +1,6 @@
 from model.group import Group
 
+
 class Grouphelper:
 
     def __init__(self, app):
@@ -76,8 +77,3 @@ class Grouphelper:
             id = element.find_element_by_name("selected[]").get_attribute("value")
             groups.append(Group(name=text,id=id))
         return groups
-
-
-
-
-
