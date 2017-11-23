@@ -7,6 +7,7 @@ def test_secondtest(app):
     contact = Contact(firstname="Ivan", middlename="\\9", lastname="Ivanov", nickname="ivan299",
                                   title="Test contact", companyname="Test company", companyaddress="123",
                                   homephone="700000000", mobilephone="52353452345", workphone="10000002020", secondaryphone="42134123412", firstmail="test@mail.ru",
+                                  secondmail="test2@mail.ru", thirdmail="test3@mail.ru",
                                   homepage="http://localhost/addressbook/edit.php")
     app.contact.fill_data(contact)
     app.contact.submit_new()
