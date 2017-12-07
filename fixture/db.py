@@ -28,11 +28,11 @@ class Dbfixture:
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, lastname,address, home, mobile, work, email, email2, email3 from addressbook")
+            cursor.execute("select id, firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, email, email2, email3, homepage, phone2 from addressbook")
             for row in cursor:
-                (id, firstname, lastname,address , home, mobile, work, email, email2, email3) = row
-                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname, companyaddress=address,
-                                    homephone=home, mobilephone=mobile, workphone=work, firstmail=email, secondmail=email2, thirdmail=email3))
+                (id, firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, email, email2, email3, homepage, phone2) = row
+                list.append(Contact(id=str(id), firstname=firstname, middlename=middlename, lastname=lastname, nickname=nickname, companyname=company, title=title, companyaddress=company,
+                                    homephone=home, mobilephone=mobile, workphone=work, firstmail=email, secondmail=email2, thirdmail=email3, homepage=homepage, secondaryphone=phone2))
         finally:
             cursor.close()
         return list
