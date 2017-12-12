@@ -1,24 +1,25 @@
 import re
-from random import randrange
+from model.contact import Contact
 
-def test_home_page_info(app):
-    all_contacts = app.contact.get_contact_list()
-    index = randrange(len(all_contacts))
-    contact_from_home_page = app.contact.get_contact_list()[index]
-    contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
-    assert contact_from_home_page.firstname == contact_from_edit_page.firstname
-    assert contact_from_home_page.lastname == contact_from_edit_page.lastname
-    assert contact_from_home_page.companyaddress == contact_from_edit_page.companyaddress
-    assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
-    assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
+def test_home_page_info(app, db):
+    contacts_from_home_page = app.contact.get_contact_list()
+    for n in range (len(contacts_from_home_page)):
+        contacts_from_home_page = sorted(app.contact.get_contact_list(), key=Contact.id_or_max)[n]
+        contacts_from_db = sorted(db.get_contact_list(), key=Contact.id_or_max)[n]
+        assert contacts_from_home_page.firstname == contacts_from_db.firstname
+        assert contacts_from_home_page.lastname == contacts_from_db.lastname
+        assert contacts_from_home_page.companyaddress == contacts_from_db.companyaddress
+        assert contacts_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contacts_from_db)
+        assert contacts_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contacts_from_db)
 
-def test_phones_on_contact_view_page(app):
+
+'''def test_phones_on_contact_view_page(app):
     contact_from_view_page = app.contact.get_contact_from_view_page(0)
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(0)
     assert contact_from_view_page.homephone == contact_from_edit_page.homephone
     assert contact_from_view_page.workphone == contact_from_edit_page.workphone
     assert contact_from_view_page.mobilephone == contact_from_edit_page.mobilephone
-    assert contact_from_view_page.secondaryphone == contact_from_edit_page.secondaryphone
+    assert contact_from_view_page.secondaryphone == contact_from_edit_page.secondaryphone'''
 
 def clear(s):
     return re.sub("[() -]", "", s)
