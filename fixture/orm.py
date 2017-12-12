@@ -42,7 +42,8 @@ class ORMFixture:
 
     def convert_contacts_to_model(self, contacts):
         def convert(contact):
-           return Contact(id=str(contact.id),firstname=contact.firstname, lastname=contact.lastname)
+           return Contact(id=str(contact.id), firstname=contact.firstname, middlename=contact.middlename, lastname=contact.lastname, nickname=contact.nickname, companyname=contact.company, title=contact.title, companyaddress=contact.address,
+                                    homephone=contact.home, mobilephone=contact.mobile, workphone=contact.work, firstmail=contact.email, secondmail=contact.email2, thirdmail=contact.email3, homepage=contact.homepage, secondaryphone=contact.phone2)
         return list(map(convert, contacts))
 
     @db_session
@@ -59,4 +60,3 @@ class ORMFixture:
         orm_group = list(select(g for g in ORMFixture.ORMGroup if g.id == group.id))[0]
         return self.convert_contacts_to_model(
             select(c for c in ORMFixture.ORMContact if c.deprecated is None and orm_group not in c.groups))
-

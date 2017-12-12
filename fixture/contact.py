@@ -1,4 +1,6 @@
 from model.contact import Contact
+from fixture import group
+import random
 import re
 
 class Contacthelper:
@@ -150,3 +152,14 @@ class Contacthelper:
         secondaryphone = re.search("P: (.*)", text).group(1)
         return Contact(homephone=homephone,mobilephone=mobilephone,
                        workphone=workphone, secondaryphone=secondaryphone)
+
+    def select_group_to_show(self, groupname):
+        wd = self.app.wd
+        wd.find_element_by_name('group').click()
+        wd.find_element_by_xpath("//option[contains(text(),'%s')]" % groupname).click()
+
+    def add_to_group(self, groupname):
+        wd = self.app.wd
+        group = wd.find_elements_by_xpath("//option[contains(text(),'%s')]" % groupname)
+        group[-1].click()
+        wd.find_element_by_name('add').click()
