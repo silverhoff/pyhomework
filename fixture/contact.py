@@ -156,7 +156,14 @@ class Contacthelper:
     def select_group_to_show(self, groupname):
         wd = self.app.wd
         wd.find_element_by_name('group').click()
-        wd.find_element_by_xpath("//option[contains(text(),'%s')]" % groupname).click()
+        wd.find_element_by_xpath("//*[@value='%s']" % groupname).click()
+
+    def delete_contact_from_group(self, contact, groupname):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_group_to_show(groupname)
+        self.select_contact_by_id(contact.id)
+        wd.find_element_by_name('remove').click()
 
     def add_to_group(self, groupname):
         wd = self.app.wd

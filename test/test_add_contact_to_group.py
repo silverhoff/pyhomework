@@ -6,7 +6,7 @@ from random import randrange
 
 dab = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
 
-def test_add_contact_to_group(app, db, check_ui):
+def test_add_contact_to_group(app, db):
     if app.contact.count() == 0:
         app.open_home_page()
         app.contact.open_new()
