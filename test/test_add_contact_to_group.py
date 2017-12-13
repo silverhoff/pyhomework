@@ -12,12 +12,25 @@ def test_add_contact_to_group(app, db, check_ui):
         app.contact.open_new()
         app.contact.fill_data(Contact(firstname="Igor"))
         app.contact.submit_new()
+    if len(db.get_group_list()) == 0:
+        app.group.create_new_group(Group(name="test"))
     group = (random.choice(db.get_group_list()))
-    print (group)
     old_contacts = dab.get_contacts_in_group(group)
-    index = randrange(len(db.get_contact_list()))
-    contact = old_contacts[index]
-    app.contact.open_home()
+    contacts = db.get_contact_list()
+    index = randrange(len(contacts))
+    contact = contacts[index]
+    for i in range (len(contacts)):
+        if old_contacts.count(contact):
+            index = randrange(len(contacts))
+            contact = contacts[index]
+        else:
+            break
+    else:
+        app.open_home_page()
+        app.contact.open_new()
+        app.contact.fill_data(Contact(firstname="Igor"))
+        app.contact.submit_new()
+        contact = sorted(db.get_contact_list(), key=Contact.id_or_max)[-1]
     app.contact.select_contact_by_id(contact.id)
     app.contact.add_to_group(group.name)
     new_contacts = dab.get_contacts_in_group(group)

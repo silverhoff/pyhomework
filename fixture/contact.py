@@ -1,6 +1,6 @@
 from model.contact import Contact
 from fixture import group
-import random
+from random import randrange
 import re
 
 class Contacthelper:
