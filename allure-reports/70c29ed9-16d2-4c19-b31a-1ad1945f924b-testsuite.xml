@@ -1,0 +1,99 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960719566" stop="1513960740059">
+  <name>test.add_contact_test</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960719566" status="passed" stop="1513960731008">
+      <name>test_secondtest[None:firstname3kPsz:lastnameCP]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960726399" status="passed" stop="1513960726403">
+          <name>Given a group contact</name>
+          <title>Given a group contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960726403" status="passed" stop="1513960731008">
+          <name>I add a contact None:firstname3kPsz:lastnameCP to the list</name>
+          <title>I add a contact None:firstname3kPsz:lastnameCP to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960731008" status="passed" stop="1513960731008">
+          <name>the new contact list equal to the old list with the added contact</name>
+          <title>the new contact list equal to the old list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1513960731012" status="passed" stop="1513960735560">
+      <name>test_secondtest[None:firstnameUO:lastnameP5fud]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960731080" status="passed" stop="1513960731084">
+          <name>Given a group contact</name>
+          <title>Given a group contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960731084" status="passed" stop="1513960735557">
+          <name>I add a contact None:firstnameUO:lastnameP5fud to the list</name>
+          <title>I add a contact None:firstnameUO:lastnameP5fud to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960735557" status="passed" stop="1513960735560">
+          <name>the new contact list equal to the old list with the added contact</name>
+          <title>the new contact list equal to the old list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1513960735560" status="passed" stop="1513960740059">
+      <name>test_secondtest[None:firstname FyV  Edd:lastnameOJThU  X ]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960735616" status="passed" stop="1513960735616">
+          <name>Given a group contact</name>
+          <title>Given a group contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960735616" status="passed" stop="1513960740053">
+          <name>I add a contact None:firstname FyV  Edd:lastnameOJThU  X  to the list</name>
+          <title>I add a contact None:firstname FyV  Edd:lastnameOJThU  X  to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960740054" status="passed" stop="1513960740058">
+          <name>the new contact list equal to the old list with the added contact</name>
+          <title>the new contact list equal to the old list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

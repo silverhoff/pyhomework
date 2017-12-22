@@ -1,0 +1,49 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960747110" stop="1513960749346">
+  <name>test.contact_edit_test</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960747110" status="passed" stop="1513960749346">
+      <name>test_contact_edit_first_part</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960747166" status="passed" stop="1513960747322">
+          <name>Check that it is not empty contact list</name>
+          <title>Check that it is not empty contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960747322" status="passed" stop="1513960747322">
+          <name>Given a group contact</name>
+          <title>Given a group contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960747322" status="passed" stop="1513960747322">
+          <name>Choose random contact</name>
+          <title>Choose random contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960747322" status="passed" stop="1513960749218">
+          <name>I edit a contact 175:Boris:Borisov</name>
+          <title>I edit a contact 175:Boris:Borisov</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960749218" status="passed" stop="1513960749346">
+          <name>the new contact list equal to the old list with the edited contact</name>
+          <title>the new contact list equal to the old list with the edited contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

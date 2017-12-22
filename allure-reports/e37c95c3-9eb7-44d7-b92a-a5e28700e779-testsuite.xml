@@ -1,0 +1,111 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960752344" stop="1513960753261">
+  <name>test.test_add_contact_to_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960752344" status="failed" stop="1513960753261">
+      <name>test_add_contact_to_group</name>
+      <failure>
+        <message>AssertionError: assert [179:Boris:Borisov] == []
+  Left contains more items, first extra item: 179:Boris:Borisov
+  Use -v to get the full diff</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x00000279D89CE080&gt;
+db = &lt;fixture.db.Dbfixture object at 0x00000279D89B3AC8&gt;
+
+    def test_add_contact_to_group(app, db):
+        with pytest.allure.step('Check that it is not empty contact list'):
+            if app.contact.count() == 0:
+                app.open_home_page()
+                app.contact.open_new()
+                app.contact.fill_data(Contact(firstname="Igor"))
+                app.contact.submit_new()
+        with pytest.allure.step('Check that it is not empty group list'):
+            if len(db.get_group_list()) == 0:
+                app.group.create_new_group(Group(name="test"))
+        with pytest.allure.step('Choose random group'):
+            group = (random.choice(db.get_group_list()))
+        with pytest.allure.step('Choose random contact'):
+            old_contacts = dab.get_contacts_in_group(group)
+            contacts = db.get_contact_list()
+            index = randrange(len(contacts))
+            contact = contacts[index]
+        with pytest.allure.step('Check that contact %s not in group %s' % (contact, group)):
+            for i in range (len(contacts)):
+                if old_contacts.count(contact):
+                    index = randrange(len(contacts))
+                    contact = contacts[index]
+                else:
+                    break
+            else:
+                app.open_home_page()
+                app.contact.open_new()
+                app.contact.fill_data(Contact(firstname="Igor"))
+                app.contact.submit_new()
+                contact = sorted(db.get_contact_list(), key=Contact.id_or_max)[-1]
+        with pytest.allure.step('Add contact %s in group %s' % (contact, group)):
+            app.contact.select_contact_by_id(contact.id)
+            app.contact.add_to_group(group.name)
+        with pytest.allure.step('the new group list equal to the old list with the added contact to the group'):
+            new_contacts = dab.get_contacts_in_group(group)
+            old_contacts.append(contact)
+&gt;           assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+E           assert [179:Boris:Borisov] == []
+E             Left contains more items, first extra item: 179:Boris:Borisov
+E             Use -v to get the full diff
+
+..\..\..\PycharmProjects\pyhomework\test\test_add_contact_to_group.py:46: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960752372" status="passed" stop="1513960752580">
+          <name>Check that it is not empty contact list</name>
+          <title>Check that it is not empty contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960752580" status="passed" stop="1513960752584">
+          <name>Check that it is not empty group list</name>
+          <title>Check that it is not empty group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960752584" status="passed" stop="1513960752584">
+          <name>Choose random group</name>
+          <title>Choose random group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960752584" status="passed" stop="1513960752592">
+          <name>Choose random contact</name>
+          <title>Choose random contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960752592" status="passed" stop="1513960752592">
+          <name>Check that contact 179:Boris:Borisov not in group 213:name:headerkU oGtkNn4   ajm6a:footernLErFSLgm7QJfo8bo </name>
+          <title>Check that contact 179:Boris:Borisov not in group 213:name:headerkU oGtkNn4   ajm6a:footernLErFSLgm7QJfo8bo </title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960752592" status="passed" stop="1513960753233">
+          <name>Add contact 179:Boris:Borisov in group 213:name:headerkU oGtkNn4   ajm6a:footernLErFSLgm7QJfo8bo </name>
+          <title>Add contact 179:Boris:Borisov in group 213:name:headerkU oGtkNn4   ajm6a:footernLErFSLgm7QJfo8bo </title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960753233" status="failed" stop="1513960753237">
+          <name>the new group list equal to the old list with the added contact to the group</name>
+          <title>the new group list equal to the old list with the added contact to the group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

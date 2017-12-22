@@ -1,0 +1,83 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960753308" stop="1513960754213">
+  <name>test.test_del_contact</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960753308" status="failed" stop="1513960754213">
+      <name>test_delete_first_contact</name>
+      <failure>
+        <message>AssertionError: assert (23 - 1) == 23
+ +  where 23 = len([156:Boris:Borisov, 157:Boris:Borisov, 168:Boris:Borisov, 170:firstname3kPsz:lastnameCP, 171:firstnameUO:lastnameP5fud, 172:Boris:Borisov, ...])
+ +  and   23 = &lt;bound method Contacthelper.count of &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;&gt;()
+ +    where &lt;bound method Contacthelper.count of &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;&gt; = &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;.count
+ +      where &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt; = &lt;fixture.application.Application object at 0x00000279D89CE080&gt;.contact</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x00000279D89CE080&gt;
+db = &lt;fixture.db.Dbfixture object at 0x00000279D89B3AC8&gt;, check_ui = False
+
+    def test_delete_first_contact(app, db, check_ui):
+        with pytest.allure.step('Check that it is not empty contact list'):
+            if app.contact.count() == 0:
+                app.open_home_page()
+                app.contact.open_new()
+                app.contact.fill_data(Contact(firstname="Igor"))
+                app.contact.submit_new()
+        with pytest.allure.step('Given a contact list'):
+            old_contacts = db.get_contact_list()
+        with pytest.allure.step('Choose random contact'):
+            contact = random.choice(old_contacts)
+        with pytest.allure.step('Delete contact %s' % contact):
+            app.open_home_page()
+            app.contact.delete_by_id(contact.id)
+            app.open_home_page()
+        with pytest.allure.step('the new contact list equal to the old list without the deleted contact'):
+&gt;           assert len(old_contacts) - 1 == app.contact.count()
+E           assert (23 - 1) == 23
+E            +  where 23 = len([156:Boris:Borisov, 157:Boris:Borisov, 168:Boris:Borisov, 170:firstname3kPsz:lastnameCP, 171:firstnameUO:lastnameP5fud, 172:Boris:Borisov, ...])
+E            +  and   23 = &lt;bound method Contacthelper.count of &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;&gt;()
+E            +    where &lt;bound method Contacthelper.count of &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;&gt; = &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt;.count
+E            +      where &lt;fixture.contact.Contacthelper object at 0x00000279D865B9B0&gt; = &lt;fixture.application.Application object at 0x00000279D89CE080&gt;.contact
+
+..\..\..\PycharmProjects\pyhomework\test\test_del_contact.py:21: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960753332" status="passed" stop="1513960753536">
+          <name>Check that it is not empty contact list</name>
+          <title>Check that it is not empty contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960753536" status="passed" stop="1513960753540">
+          <name>Given a contact list</name>
+          <title>Given a contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960753540" status="passed" stop="1513960753540">
+          <name>Choose random contact</name>
+          <title>Choose random contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960753540" status="passed" stop="1513960754161">
+          <name>Delete contact 185:firstname3kPsz:lastnameCP</name>
+          <title>Delete contact 185:firstname3kPsz:lastnameCP</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960754161" status="failed" stop="1513960754205">
+          <name>the new contact list equal to the old list without the deleted contact</name>
+          <title>the new contact list equal to the old list without the deleted contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

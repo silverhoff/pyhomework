@@ -1,0 +1,46 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960754890" stop="1513960756855">
+  <name>test.test_home_page_info</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960754890" status="failed" stop="1513960756855">
+      <name>test_home_page_info</name>
+      <failure>
+        <message>AssertionError: assert 'firstmailL 7...hirdmailq VFQ' == 'firstmailL 7o...hirdmailq VFQ'
+    firstmailL 7o
+  - secondmail qXY09Dz
+  + secondmail  qXY09Dz
+  ?            +
+    thirdmailq VFQ</message>
+        <stack-trace>app = &lt;fixture.application.Application object at 0x00000279D89CE080&gt;
+db = &lt;fixture.db.Dbfixture object at 0x00000279D89B3AC8&gt;
+
+    def test_home_page_info(app, db):
+        contacts_from_home_page = app.contact.get_contact_list()
+        for n in range (len(contacts_from_home_page)):
+            contacts_from_home_page = sorted(app.contact.get_contact_list(), key=Contact.id_or_max)[n]
+            contacts_from_db = sorted(db.get_contact_list(), key=Contact.id_or_max)[n]
+            assert contacts_from_home_page.firstname == contacts_from_db.firstname
+            assert contacts_from_home_page.lastname == contacts_from_db.lastname
+            assert contacts_from_home_page.companyaddress == contacts_from_db.companyaddress
+&gt;           assert contacts_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contacts_from_db)
+E           AssertionError: assert 'firstmailL 7...hirdmailq VFQ' == 'firstmailL 7o...hirdmailq VFQ'
+E               firstmailL 7o
+E             - secondmail qXY09Dz
+E             + secondmail  qXY09Dz
+E             ?            +
+E               thirdmailq VFQ
+
+..\..\..\PycharmProjects\pyhomework\test\test_home_page_info.py:12: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

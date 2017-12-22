@@ -1,0 +1,49 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1513960754213" stop="1513960754890">
+  <name>test.test_del_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1513960754213" status="passed" stop="1513960754890">
+      <name>test_delete_some_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="16900-MainThread"/>
+        <label name="host" value="DESKTOP-4F0FOUR"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1513960754253" status="passed" stop="1513960754257">
+          <name>Check that it is not empty group list</name>
+          <title>Check that it is not empty group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960754257" status="passed" stop="1513960754257">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960754257" status="passed" stop="1513960754257">
+          <name>Choose random group</name>
+          <title>Choose random group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960754257" status="passed" stop="1513960754786">
+          <name>Delete group 229:::</name>
+          <title>Delete group 229:::</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1513960754786" status="passed" stop="1513960754890">
+          <name>the new group list equal to the old list without the deleted group</name>
+          <title>the new group list equal to the old list without the deleted group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
